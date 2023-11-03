@@ -1,0 +1,212 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    border-width: 0px;
+}
+
+/* FOND */
+
+body {
+    background-color: #292929;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw
+}
+
+/* PARTIE DE GAUCHE */
+
+.vitals {
+    color: #FFF0DB;
+    text-align: center;
+}
+
+.vitals__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.vitals__item {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    position: relative;
+    align-items: center;
+}
+
+.vitals__item:before {
+    content: '';
+    position: absolute;
+    background-color: #292929;
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.vitals__item:nth-child(1) {
+    background-color: #ffbe0b;
+}
+
+.vitals__item:nth-child(2) {
+    background-color: #fb5607;
+}
+
+.vitals__item:nth-child(3) {
+    background-color: #ff006e;
+}
+
+.vitals__item:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #8338ec;
+}
+
+.vitals__item:nth-child(5) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: #3a86ff;
+}
+
+.vitals__subtitle {
+    text-transform: uppercase;
+    font-size: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.vitals__number {
+    text-transform: uppercase;
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+}
+
+.vitals__mention {
+    font-size: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* PARTIE DE DROITE */
+
+.tamastudi {
+    background-image: linear-gradient(#ffbe0b,#fb5607,#ff006e,#8338ec,#3a86ff);
+    aspect-ratio: 3 / 4;
+    border-radius: 100% / 125% 125% 80% 80%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12vh;
+    align-items: flex-end;
+}
+
+.tamastudi__container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+}
+
+.tamastudi__title {
+    font-family: "Luckiest Guy";
+    letter-spacing: 2px;
+    color: #FFF0DB;
+    text-align: center;
+    font-size: 4vh;;
+}
+
+.tamastudi__screen {
+    width: 100%;
+    aspect-ratio: 1/1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.tamastudi__screen:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #292929;
+    border-radius: 10px;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.tamastudi__container-actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.tamastudi__actions {
+    position: relative;
+    font-size: 1.75vh;
+    transition: font-size 0.25s ease-out;
+}
+
+.tamastudi__actions.selected {
+    font-size: 3vh;
+}
+
+.tamastudi__container-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tamastudi__button {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #FFF0DB;
+}
+
+.tamastudi__button:nth-child(2){
+    transform: translateY(100%);
+}
+
+.tamastudi__character {
+    position: relative;
+    z-index: 1;
+    font-size: 11vh;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/* GENERAL */
+
+.hidden {
+    display: none;
+}
