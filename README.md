@@ -17,13 +17,13 @@ Durant ces lives nous allons faire uniquement du javascript, le code HTML et CSS
 
 ## Planning
 
-| Numéro | Date       | Heure     | Titre                    | Replay                |
-| ------ | ---------- | --------- | ------------------------ | --------------------- |
-| 01     | 06/11/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible |
-| 02     | 13/11/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible |
-| 03     | 20/11/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible |
-| 04     | 27/11/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible |
-| 05     | 04/12/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible |
-| 06     | 11/12/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible |
+| Numéro | Date       | Heure     | Titre                    | Replay                                      |
+| ------ | ---------- | --------- | ------------------------ | ------------------------------------------- |
+| 01     | 06/11/2023 | 10h - 11h | On code notre tamagotchi | https://app.studi.fr/v3/events/57802/replay |
+| 02     | 13/11/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible                       |
+| 03     | 20/11/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible                       |
+| 04     | 27/11/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible                       |
+| 05     | 04/12/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible                       |
+| 06     | 11/12/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible                       |
 
 ## Ressources

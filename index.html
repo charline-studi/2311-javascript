@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="vitals hidden">
+    <div class="vitals hidden js-vitals">
       <ul class="vitals__list">
         <li class="vitals__item">
           <p class="vitals__subtitle">Faim</p>
@@ -38,7 +38,7 @@
         <li class="vitals__item">
           <p class="vitals__subtitle">Durée de vie</p>
           <p class="vitals__number mood">0</p>
-          <p class="vitals__mention">de <span>Nom</span></p>
+          <p class="vitals__mention">de <span></span></p>
         </li>
       </ul>
     </div>
@@ -55,7 +55,7 @@
             <li class="tamastudi__actions">🚽</li>
             <li class="tamastudi__actions">🧽</li>
           </ul>
-          <div class="tamastudi__character">🥚</div>
+          <div class="tamastudi__character js-character">🥚</div>
         </div>
         <div class="tamastudi__container-buttons">
           <button class="tamastudi__button" data-direction="left"></button>
@@ -64,5 +64,7 @@
         </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
