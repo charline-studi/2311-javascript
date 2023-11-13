@@ -27,3 +27,5 @@ Durant ces lives nous allons faire uniquement du javascript, le code HTML et CSS
 | 06     | 11/12/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible                       |
 
 ## Ressources
+
+- [Listes des évènements JS](https://developer.mozilla.org/fr/docs/Web/Events)
