@@ -24,7 +24,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10vw
+    gap: 10vw;
+    font-family: Helvetica, sans-serif;
 }
 
 /* PARTIE DE GAUCHE */

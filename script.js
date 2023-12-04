@@ -68,20 +68,17 @@ const birth = () => {
   nameDisplay.textContent = myTama.name;
   // 5) mettre les scores des vitals à 5
   const defaultScore = 5;
-  const scoresDisplay = document.querySelectorAll(".js-score");
-  scoresDisplay.forEach((score) => {
-    score.textContent = defaultScore;
-  });
   myTama.fed = defaultScore;
   myTama.playfull = defaultScore;
   myTama.cleaned = defaultScore;
+  updateVitals()
   // 6) afficher les actions
   const actions = document.querySelector(".js-actions");
   actions.classList.remove("hidden");
   // 7) appel de la fonction pour le faire "grandir"
   evolve();
   // 8) Calcule de la durée de vie
-  lifeDuration();
+  calcLifeDuration();
 };
 
 /* PHASE 2 : l'évolution de mon tama
@@ -92,6 +89,7 @@ const evolve = () => {
   // 1) Attendre que notre tamaStudi ait une "première envie"
   const functionToExecute = () => {
     mood();
+    cycleOfAdultLife()
   };
   wantsTo(functionToExecute);
 };
@@ -122,7 +120,7 @@ const wantsTo = (callback) => {
     });
     const desire = needs[randomIndexNeeds];
     if (callback) {
-      callback();
+      callback(desire);
     } else {
       showInScreen(desire);
     }
@@ -148,7 +146,7 @@ const mood = () => {
 /* DURÉE DE VIE :
 Une fonction qui toutes les minutes met à jour la durée de vie du Tama
 */
-const lifeDuration = () => {
+const calcLifeDuration = () => {
   const duration = 60_000; // 60 secondes
   const displayLifeDuration = document.querySelector(".js-life-duration");
   setInterval(() => {
@@ -156,6 +154,72 @@ const lifeDuration = () => {
     displayLifeDuration.textContent = myTama.lifeDuration;
   }, duration);
 };
+
+
+/* GESTION DE VIE "ADULTE"
+- Notre Tama a une humeur générale
+- Cette humeur est le moyenne de 3 indicateurs
+=> mood()
+- Ces indicateurs évoluent avec le temps
+=> À FAIRE
+- De temps en temps notre Tama a une "envie"
+=> wantsTo()
+- Si on ne réponds pas à cette envie dans les temps
+- L'indicateur associé diminue
+- Si on répond dans le temps
+- L'indicateur augmente
+=> À FAIRE
+- Et ça continue jusqu'à que notre Tama meurt
+=> À FAIRE
+*/
+const cycleOfAdultLife = () => {
+  // 1) Les indicateurs évoluent avec le temps
+  // De temps en temps notre Tama a une "envie"
+  const functionToExecute = (desire) => {
+    console.log('Envie générée', desire)
+    showInScreen(desire)
+    const hasSucceeded = true
+    manageIndicators(desire, hasSucceeded)
+  }
+  wantsTo(functionToExecute)
+}
+
+const manageIndicators = (desire, hasSucceeded) => {
+  // ["😋", "🥱", "💩"]
+  const numberToAdd = hasSucceeded ? 1 : -1
+  const calculName = hasSucceeded ? 'addition' : 'substraction'
+  if (desire === '😋' && verifyIndicatorBeforeCalcul(myTama.fed, calculName)) {
+    myTama.fed += numberToAdd
+  } 
+  else if (desire === '🥱' && verifyIndicatorBeforeCalcul(myTama.playfull, calculName)) {
+    myTama.playfull += numberToAdd
+  } 
+  else if (desire === '💩' && verifyIndicatorBeforeCalcul(myTama.cleaned, calculName)) {
+    myTama.cleaned += numberToAdd
+  }
+  updateVitals()
+  mood()
+}
+
+const verifyIndicatorBeforeCalcul = (value, calcul) => {
+  // Vérifier si l'indicateur peut être incrémenter ou décrémenter
+  if (calcul === 'addition') {
+    return value < 5
+  }
+  else {
+    return value > 0
+  }
+}
+
+const updateVitals = () => {
+  // Affiche dans les vitals la valeur des 3 indicateurs
+  const displayIndicatorEat = document.querySelector('.js-score--eat')
+  displayIndicatorEat.textContent = myTama.fed
+  const displayIndicatorPlay = document.querySelector('.js-score--play')
+  displayIndicatorPlay.textContent = myTama.playfull
+  const displayIndicatorClean = document.querySelector('.js-score--clean')
+  displayIndicatorClean.textContent = myTama.cleaned
+}
 
 /* Fonction du retourne un nombre aléatoire compris entre un min et max */
 const getRandomInt = (props) => {
