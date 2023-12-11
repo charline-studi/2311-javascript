@@ -205,6 +205,14 @@ body {
     align-items: flex-end;
 }
 
+.tamastudi__desire {
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    top: 1rem;
+    left: 2rem;
+}
+
 
 /* GENERAL */
 

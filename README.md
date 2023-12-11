@@ -24,7 +24,7 @@ Durant ces lives nous allons faire uniquement du javascript, le code HTML et CSS
 | 03     | 20/11/2023 | 10h - 11h | On code notre tamagotchi | https://app.studi.fr/v3/events/57804/replay |
 | 04     | 27/11/2023 | 10h - 11h | On code notre tamagotchi | https://app.studi.fr/v3/events/57805/replay |
 | 05     | 04/12/2023 | 10h - 11h | On code notre tamagotchi | https://app.studi.fr/v3/events/57806/replay                       |
-| 06     | 11/12/2023 | 10h - 11h | On code notre tamagotchi | Pas encore disponible                       |
+| 06     | 11/12/2023 | 10h - 11h | On code notre tamagotchi | https://app.studi.fr/v3/events/57807/replay                       |
 
 ## Ressources
 
